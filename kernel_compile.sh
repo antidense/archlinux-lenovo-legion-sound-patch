@@ -1,4 +1,4 @@
-!#/bin/bash
+#!/bin/bash
 uname -a
 version=$(uname -r | cut -d'-' -f1)
 echo "$version"
