@@ -16,7 +16,7 @@ wget -nc https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-$version.tar.sign
 wget -O lenovo-7i-gen7-sound-6.2.0-rc3-0.0.5b-002.patch  https://bugzilla.kernel.org/attachment.cgi?id=303828
 gpg2 --list-packets linux-$version.tar.sign
 
-read -p "What is the current key ID? : " keyID
+read -p "What is the current keyid listed above? It should be something like 38........93E " keyID
 gpg2 --recv-keys $keyID
 unxz linux-$version.tar.xz
 gpg2 --tofu-policy good $keyID
